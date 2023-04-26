@@ -1,0 +1,111 @@
+body{
+	margin: 0;
+	padding: 0;
+	top: 0px;
+	background-image: url('./images/Crazy_Prices_LP.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+  background-color: gray;
+  font-size: clamp(12px, 1vw, 50px);
+  font-family: 'Breuer Text', sans-serif;
+
+}
+
+@media only screen and (max-width: 2vw) {
+  body {
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+#login-btn{
+	background-color: #F3CD58;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bolder;
+}
+
+.bet-btn {
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 
+        0 0 0 2px #0E9D40, 
+        0 0 0 4px #BCBC04, 
+        0 0 0 6px #F89B02;
+    animation: pulse 1s ease-out infinite;
+
+}
+@keyframes pulse {
+  0% {
+    background: radial-gradient(circle at center, #9CB3F6, #3450A4, #0240F8);
+  }
+  50% {
+    background: radial-gradient(circle at center, #0240F8, #9CB3F6, #3450A4 );
+  }
+  100% {
+    background: radial-gradient(circle at center, #9CB3F6, #3450A4, #0240F8);
+  }
+}
+
+
+
+.number {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   outline: 1px solid black;
+   outline-offset: -5px;
+   border-radius: 100px;
+   background: radial-gradient(circle at center, #9CB3F6, #3450A4, #0240F8);
+   height: 100px;
+   width: 100px;
+   padding: auto;
+   font-size: 50px;
+   box-shadow: inset 0 0 0 1px white, inset 0 0 0 4px black, 0 0 10px white;
+   position: relative;
+   overflow: hidden;
+   z-index: 3;
+}
+
+.number::before,
+.number::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: 2px solid #fff;
+   border-radius: 10px;
+   z-index: 2;
+   animation: rotate 1s linear infinite;
+}
+
+.number::before {
+   animation-delay: 0s;
+}
+
+.number::after {
+   animation-delay: 1s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.banner-btn{
+  color: white;
+}
+
+a:hover{
+  cursor: pointer;
+}
